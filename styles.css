@@ -9,6 +9,14 @@ td {
 #btn {
     margin-bottom: 20px;
     display: block;
+    background-color: rgb(16, 98, 149);
+    color: white;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+    border-radius: 20px;
+    border-color: lightsteelblue;
+    
 }
 .center {
     margin-left: auto;
@@ -21,4 +29,21 @@ tr:nth-of-type(2n+1){
 table {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
+}
+#btn:hover{
+    cursor: pointer;
+    background-color: rgb(8, 57, 88);
+    border-color: rgb(220, 223, 54);
+
+}
+h1 {
+    text-align: center;
+}
+th:nth-of-type(1) {
+    /* border: 1px solid white; */
+    border-radius: 10px 0 0 0;
+}
+th:nth-of-type(4) {
+    /* border: 1px solid white; */
+    border-radius: 0 10px 0 0;
 }
