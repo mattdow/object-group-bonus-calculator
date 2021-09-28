@@ -101,7 +101,7 @@ function calcAllBonuses() {
   
   for (let employee of employees) {
     let el = bonusCalculator(employee);
-    $("#list").append(`<li>${el.name} - Bonus Percentage: ${el.bonusPercentage}, Total Comp: ${el.totalCompensation}, Total Bonus: ${el.totalBonus}</li>`);
+    $("#tbl").append(`<tr><td>${el.name}</td><td>${el.bonusPercentage}%</td><td>${el.totalCompensation}</td><td>${el.totalBonus}</td></tr>`);
 
   }
 }
