@@ -98,14 +98,22 @@ function readyNow() {
 }
 
 function calcAllBonuses() {
-  
+
   for (let employee of employees) {
     let el = bonusCalculator(employee);
-    $("#tbl").append(`<tr><td>${el.name}</td><td>${el.bonusPercentage}%</td><td>${el.totalCompensation}</td><td>${el.totalBonus}</td></tr>`);
+    $("#tbl").append(`<tr><td>${el.name}</td><td>${el.bonusPercentage}%</td><td>${formatCurrency(el.totalCompensation)}</td><td>${formatCurrency(el.totalBonus)}</td></tr>`);
 
   }
 }
 for (let employee of employees) {
   console.log(bonusCalculator(employee));
+}
+
+function formatCurrency(number) {
+  return new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+  }).format(number);
 }
 
